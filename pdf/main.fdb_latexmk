@@ -1,15 +1,15 @@
 # Fdb version 4
-["bibtex main"] 1776176043.58299 "main.aux" "main.bbl" "main" 1776176054.6815 0
+["bibtex main"] 1776246164.44518 "main.aux" "main.bbl" "main" 1776246174.65067 0
   "./references.bib" 1776164840 23610 4460e2894ed3a2b6300ccd6c86bd9662 ""
   "c:/texlive/2026/texmf-dist/bibtex/bst/base/unsrt.bst" 1776152433 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "main.aux" 1776176052 16606 13a94237e5b041307192f2102166028a "pdflatex"
+  "main.aux" 1776246172 17109 fe336877c7af07965e3e873697b66d0f "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1776176044.60054 "c:/Users/Usuario/Documents/MURIA - Practicas/MURIA-Practicas/pdf/main.tex" "main.pdf" "main" 1776176054.68259 0
+["pdflatex"] 1776246165.20186 "c:/Users/Usuario/Documents/MURIA - Practicas/MURIA-Practicas/pdf/main.tex" "main.pdf" "main" 1776246174.65192 0
   "FAP_style.sty" 1776164840 1102 0be1031591d5f3f3fe87320a6edb0fa2 ""
-  "c:/Users/Usuario/Documents/MURIA - Practicas/MURIA-Practicas/pdf/main.tex" 1776176010 55523 258723a6bb76b456c1a95f8121c3b3a7 ""
+  "c:/Users/Usuario/Documents/MURIA - Practicas/MURIA-Practicas/pdf/main.tex" 1776246135 61041 407bde468fe19b6c2766af12c2c40bab ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/base/8r.enc" 1776153980 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1776154780 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1776153456 960 379cc0019370a9e0208a0a3f949f847a ""
@@ -288,10 +288,10 @@
   "figures/yolo8_vdet.png" 1776164840 112590 44d39839171dd184cd4d2df43263e154 ""
   "figures/yolo_stats.png" 1776164842 502685 81988a12c7b480c7f8e0ad865330f9ab ""
   "figures/yolov7_veh.png" 1776164840 84851 e7a145cebdb05ca03d6160d657767863 ""
-  "main.aux" 1776176052 16606 13a94237e5b041307192f2102166028a "pdflatex"
-  "main.bbl" 1776176044 6706 c3ce24b98b111a268ac13e13bf8fbb23 "bibtex main"
-  "main.out" 1776176052 2291 36be81935c08e0e42dc10ef14d7330a6 "pdflatex"
-  "main.tex" 1776176010 55523 258723a6bb76b456c1a95f8121c3b3a7 ""
+  "main.aux" 1776246172 17109 fe336877c7af07965e3e873697b66d0f "pdflatex"
+  "main.bbl" 1776246165 6706 c3ce24b98b111a268ac13e13bf8fbb23 "bibtex main"
+  "main.out" 1776246172 2850 7a8bb17706afd0c32d087f57c11710fc "pdflatex"
+  "main.tex" 1776246135 61041 407bde468fe19b6c2766af12c2c40bab ""
   (generated)
   "main.aux"
   "main.log"

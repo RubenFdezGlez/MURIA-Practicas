@@ -458,6 +458,11 @@ Aunque YOLO se creó con la principal finalidad de la tarea de detección, se ha
 \end{table}
 
 
+\subsection{DINO-DETR}
+
+DINO-DETR \cite{zhang2022dino} es un detector de objetos end-to-end que mejora anteriores modelos basados en el modelo DETR \cite{DBLP:journals/corr/abs-2005-12872} en términos de rendimiento y eficiencia usando un método contrastativo para eliminar ruido en el entrenamiento, selección de consultas mixtas para inicializar los puntos clave y un esquema \textit{"look forward twice"} para predecir las \textit{bounding boxes}. Este modelo logra alcanzar un 49.4 de AP en 12 iteraciones y un 51.3 en 24, mejorando en 6.0 y 2.7, respectivamente al modelo DN-DETR. Este modelo se encuentra disponible a través de: \url{https://github.com/IDEA-Research/DIN}. 
+
+
 \subsection{DFEM-Net}
 \url{https://github.com/ahtarv/DFEM-Net}
 
@@ -480,7 +485,7 @@ Se han investigado y recopilado varios conjuntos de datos desde varias fuente, s
 
 \subsection{Multi-perspective traffic video analysis}
 
-Este conjunto de datos \cite{Sanchez-Iborra2026} está comprendido por 3 escenarios distintos, las cuales a su vez se dividen en 3 perspectivas distintas (cámara del coche, dron y cámara de vigilancia), que a su vez cada una se divide en 2 secuencias de vídeo distintas grabadas a una resolución de \textbf{1920 x 1080} a \textbf{60 fotogramas por segundo}; el total de secuencias de vídeo alcanzando 18. Un ejemplo de fotograma del dataset se puede observar en la figura \ref{fig:rsu-esc1}.
+Este conjunto de datos \cite{Sanchez-Iborra2026} está comprendido por 3 escenarios distintos, las cuales a su vez se dividen en 3 perspectivas distintas (cámara del coche, dron y cámara de vigilancia), que a su vez cada una se divide en 2 secuencias de vídeo distintas grabadas a una resolución de \textbf{1920 x 1080} a \textbf{60 fotogramas por segundo}; el total de secuencias de vídeo alcanzando 18. Un ejemplo de fotograma del dataset se puede observar en la figura \ref{fig:rsu-esc1}. Ya que este conjunto de datos no lleva ninguna etiqueta asociada a alguno de los vídeos, se utilizará únicamente para el conjunto de pruebas.
 
 \begin{figure}[htb]
 \centering
@@ -494,7 +499,7 @@ Este conjunto de datos \cite{Sanchez-Iborra2026} está comprendido por 3 escenar
 
 \subsection{Bdd100k}
 
-Este conjunto de datos \cite{bdd100k} es uno de los más grandes y diversos en cuestión de imágenes de vehículos con anotaciones precisas. Como sugiere el nombre, el dataset consta de 100,000 vídeos grabados desde una cámara acoplada en la parte delantera interior del vehículo; cada uno dura 40 segundos y están grabados a una resolución de \textbf{720 píxeles} a \textbf{30 fps}. Para mantener un dataset diverso, Bdd100k cubre diferentes condiciones climáticas y periodos del día. Las anotaciones incluyen tanto las de detección como las de segmentación y cubren 10 categorías diferentes, como los autobuses y las señales, pudiéndose observar en la figura \ref{fig:bdd} el número de apariciones de cada una de ellas en el dataset. Un ejemplo del conjunto de datos se puede observar en la figura \ref{fig:bdd-example}.
+Este conjunto de datos \cite{bdd100k} es uno de los más grandes y diversos en cuestión de imágenes de vehículos con anotaciones precisas. Como sugiere el nombre, el dataset consta de 100,000 vídeos grabados desde una cámara acoplada en la parte delantera interior del vehículo; cada uno dura 40 segundos y están grabados a una resolución de \textbf{720 píxeles} a \textbf{30 fps}. Para mantener un dataset diverso, Bdd100k cubre diferentes condiciones climáticas y periodos del día. Las anotaciones incluyen tanto las de detección como las de segmentación y cubren 10 categorías diferentes, como los autobuses y las señales, pudiéndose observar en la figura \ref{fig:bdd} el número de apariciones de cada una de ellas en el dataset. Un ejemplo del conjunto de datos se puede observar en la figura \ref{fig:bdd-example}. Este conjunto de datos se utilizará inicialmente para entrenar y validar (para que el modelo se adapte bien a nuevos datos) los modelos.
 
 \begin{figure}[htb]
 \centering
@@ -606,6 +611,74 @@ La estructura del conjunto de datos que tiene que seguir YOLO es de la siguiente
 %     .4 labels.
 % }
 
+\subsection{Preprocesado de datos}
+
+
+\subsection{Entrenamiento}
+
+En este apartado se mostrarán los diferentes parámetros y configuraciones aplicadas o que se han probado en los entrenamientos de los modelos.
+
+
+\subsubsection{YOLO}
+
+Gracias a Ultralytics \footnote{Toda la información de la librería de Ultralytics es de código abierto y está disponible en \url{https://github.com/ultralytics/ultralytics}}, está a disposición de estudiantes e investigadores una librería entera con montones de recursos para poder entrenar, validar y probar los modelos YOLO. De entre todos los parámetros disponibles, para el entrenamiento de este modelo se han utilizado o experimentado con los siguientes:
+
+\begin{itemize}
+    \item \textbf{Model}: Modelo que será entrenado.
+
+    \item \textbf{Epochs}: Cada época representa una pasada por el dataset entero.
+    
+    \item \textbf{Time}: Tiempo máximo del entrenamiento. Si este campo no está vacío, se usará en vez del parámetro de las iteraciones.
+
+    \item \textbf{Batch}: El tamaño de lote significa el número de datos de entrenamiento procesadas por el modelo en una sola iteración. En vez de procesarse el dataset entero, este se divide en unos grupos de datos o \textit{batches}.
+
+    \item \textbf{Device}: Especifica si se quiere usar la \textbf{CPU}, una única \textbf{GPU} o múltiples \textbf{GPUs} para maximizar la eficiencia del modelo y tardar mucho menos en este proceso.
+
+    \item \textbf{Workers}: Número de hilos trabajadores para la carga de datos. Influye especialmente en la velocidad del procesamiento si se está usando la \textit{GPU}.
+
+    \item \textbf{Optimizer}: Escoger el optimizador para el entrenamiento entre \textbf{SGD}, \textbf{Adam}, \textbf{AdamW}, etc. Afecta a la estabilidad y a la velocidad de convergencia. Por defecto, se selecciona por sí solo en función del modelo.
+
+    \item \textbf{Cos\_lr}: Se utiliza un \textit{scheduler} o programador de la tasa de aprendizaje coseno, ajustando la tasa de aprendizaje siguiendo una curva coseno a lo largo de los \textit{epochs} para mejorar la convergencia.
+
+    \item \textbf{Freeze}: Número de primeras capas del modelo a congelar para reducir el número de parámetros entrenables.
+
+    \item \textbf{Lr0}: Tasa de aprendizaje inicial, influye en la rapidez con la que se actualizan los pesos del modelo.
+
+    \item \textbf{Lrf}: Factor de la tasa de aprendizaje, que sirve junto a la tasa de aprendizaje inicial, para calcular la tasa de aprendizaje final de la forma: $lr\_final = lr0 \times lrf$. Se usa en conjunto con el \textit{scheduler} (como el coseno) para ajustar la tasa de aprendizaje a lo largo del entrenamiento.
+
+    \item \textbf{Weight decay}: Valor de regularización L2, que penaliza los pesos grandes para evitar que el modelo se sobreajuste a los datos de entrenamiento (overfitting).
+
+    \item \textbf{Dropout}: Tasa de pérdida de nodos del modelo para la regularización en tareas de clasificación, que evita el sobreajuste omitiendo aleatoriamente unidades durante el entrenamiento.
+
+    \item \textbf{Cache}: Decide si se quiere guardar en memoria RAM o disco las imágenes del conjunto de datos. Mejora la velocidad de entrenamiento a costa de un mayor uso de memoria.
+
+    \item \textbf{Data}: Archivo de configuración del dataset con formato \textit{.yaml}. En este archivo se fijan las rutas a las carpetas de entrenamiento, validación y pruebas, el número de clases y la asignación de IDs a cada clase. El archivo usado para entrenar el modelo YOLO se puede observar en la figura %\ref{fig:yaml}.
+
+    \item \textbf{Imgsz}: Tamaño de imagen usado en el entrenamiento. Si las imágenes del conjunto de datos no están a este tamaño se redimensionan antes de introducirlas en el modelo.
+
+    \item \textbf{Patience}: Número de etapas que hay que esperar antes de parar el entrenamiento durante las cuales las métricas de validación no mejoran.
+
+    \item \textbf{Plots}: Dibujar gráficas de las métricas de entrenamiento y validación al acabar de entrenar el modelo. Además, se guardan varias imágenes con las predicciones hechas por el modelo YOLO para comprobar su rendimiento. 
+
+    \item \textbf{Exist\_ok}: Decidir si se sobrescribe la carpeta donde se guardan los archivos de entrenamiento.
+    
+    \item \textbf{Save}: Decide si se guardan los pesos durante el entrenamiento para fijar puntos de control temporales. Esto permite resumir el entrenamiento a posteriori
+    
+    \item \textbf{Save\_period}: Cada cuántas épocas se realiza el guardado de pesos.
+
+    \item \textbf{Single\_cls}: El modelo trata todas las clases del archivo de configuración como una sola. Es útil para centrar al modelo en solamente la tarea de detección.
+    
+    \item \textbf{Project}: Nombre del directorio donde se guardarán los resultados de entrenamiento.
+\end{itemize}
+
+
+\subsection{Rastreo del Overfitting}
+
+Con el objetivo de evaluar el rendimiento del modelo y detectar posibles indicios de sobreajuste durante el entrenamiento, se ha realizado un seguimiento detallado de los valores de pérdida (loss\_rates), los cuales se registraron durante el entrenamiento en cada iteración en los conjuntos de entrenamiento y validación. El análisis de estas gráficas permite observar el comportamiento del modelo y determinar si está memorizando los datos de entrenamiento en lugar de generalizar correctamente.
+
+En los experimentos realizados se ha prestado especial atención a la diferencia entre las pérdidas tanto de entrenamiento como de validación ya que dependiendo del diferencial entre ellas podría llevar al sobreajuste.
+
+
 
 % --------------------
 \section{Implementaciones en Python}
@@ -615,6 +688,10 @@ La estructura del conjunto de datos que tiene que seguir YOLO es de la siguiente
 Todo el desarrollo de las prácticas se subirá al siguiente repositorio de \textbf{GitHub}:\\ \url{https://github.com/RubenFdezGlez/MURIA-Practicas}. 
 
 Este repositorio incluirá, además del código necesario para la ejecución del sistema, un \textbf{README} detallado con información sobre la implementación y la guía de instalación del programa.
+
+
+
+
 
 % --------------------
 \section{CREDITS}
