@@ -82,6 +82,16 @@ Hui Li, Peng Wang, Mingyu You, and Chunhua Shen.
 \newblock Reading car license plates using deep neural networks.
 \newblock {\em Image and Vision Computing}, 72:14--23, 2018.
 
+\bibitem{XU2026108842}
+Laixiang Xu, Zihan Shang, Xiangjun Chen, Tiwei Zeng, Wenhao Dai, and Junmin Zhao.
+\newblock Deep learning algorithms for license plate recognition: A review.
+\newblock {\em Neural Networks}, 200:108842, 2026.
+
+\bibitem{NARDES2026102654}
+George~B. Nardes, Thiago~H. Rausch, Bruna~H. Pereira, Douglas~R. Melo, and Cesar~A. Zeferino.
+\newblock A resource-constrained cnn accelerator for real-time license plate character recognition on fpga platforms.
+\newblock {\em Integration}, 108:102654, 2026.
+
 \bibitem{sapkota2026yolo26keyarchitecturalenhancements}
 Ranjan Sapkota, Rahul~Harsha Cheppally, Ajay Sharda, and Manoj Karkee.
 \newblock Yolo26: Key architectural enhancements and performance benchmarking for real-time object detection, 2026.
