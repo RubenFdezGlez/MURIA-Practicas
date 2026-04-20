@@ -64,5 +64,5 @@ The environment is activated through different commands depending on the OS:
 
 The Python packages needed for the programs to work are gonna be installed from the file named requirements.txt.
 ```bash
-    uv pip install requirements.txt
+    uv pip install -r requirements.txt
 ```

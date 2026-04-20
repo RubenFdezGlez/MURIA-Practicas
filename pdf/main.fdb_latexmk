@@ -1,15 +1,15 @@
 # Fdb version 4
-["bibtex main"] 1776246164.44518 "main.aux" "main.bbl" "main" 1776246174.65067 0
-  "./references.bib" 1776164840 23610 4460e2894ed3a2b6300ccd6c86bd9662 ""
+["bibtex main"] 1776676728.62042 "main.aux" "main.bbl" "main" 1776676737.07763 0
+  "./references.bib" 1776669764 26187 1b58253e8bf5f237dc9431c2d07c9a81 ""
   "c:/texlive/2026/texmf-dist/bibtex/bst/base/unsrt.bst" 1776152433 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "main.aux" 1776246172 17109 fe336877c7af07965e3e873697b66d0f "pdflatex"
+  "main.aux" 1776676735 18577 251bb1fd4b86ebc2e48f1fe7c0375315 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1776246165.20186 "c:/Users/Usuario/Documents/MURIA - Practicas/MURIA-Practicas/pdf/main.tex" "main.pdf" "main" 1776246174.65192 0
-  "FAP_style.sty" 1776164840 1102 0be1031591d5f3f3fe87320a6edb0fa2 ""
-  "c:/Users/Usuario/Documents/MURIA - Practicas/MURIA-Practicas/pdf/main.tex" 1776246135 61041 407bde468fe19b6c2766af12c2c40bab ""
+["pdflatex"] 1776676729.32298 "c:/Users/Usuario/Documents/MURIA - Practicas/MURIA-Practicas/pdf/main.tex" "main.pdf" "main" 1776676737.07878 0
+  "FAP_style.sty" 1776676557 1272 381e642b51f34f45cb190daf64732531 ""
+  "c:/Users/Usuario/Documents/MURIA - Practicas/MURIA-Practicas/pdf/main.tex" 1776676297 65560 29529c81233bab3e9b3f5c63e8737191 ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/base/8r.enc" 1776153980 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1776154780 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1776153456 960 379cc0019370a9e0208a0a3f949f847a ""
@@ -202,6 +202,7 @@
   "c:/texlive/2026/texmf-dist/tex/latex/caption/caption.sty" 1776152644 56128 c2ccf1a29d78c33bc553880402e4fb9a ""
   "c:/texlive/2026/texmf-dist/tex/latex/caption/caption3.sty" 1776152644 72619 ee90b6612147680fd73c3b1406a74245 ""
   "c:/texlive/2026/texmf-dist/tex/latex/caption/subcaption.sty" 1776152644 12494 0c0cdb824278a4d51cefeb2e79901315 ""
+  "c:/texlive/2026/texmf-dist/tex/latex/cite/cite.sty" 1776152901 26218 19edeff8cdc2bcb704e8051dc55eb5a7 ""
   "c:/texlive/2026/texmf-dist/tex/latex/collectbox/collectbox.sty" 1776153094 9124 59c3b56f1a073de66e3eea35f9c173c8 ""
   "c:/texlive/2026/texmf-dist/tex/latex/comment/comment.sty" 1776153145 10197 204f75d5d8d88aa345a8c402e879e63b ""
   "c:/texlive/2026/texmf-dist/tex/latex/diagbox/diagbox.sty" 1776153779 14481 3bd2c6a722b221038c31c25ef3d51ba6 ""
@@ -280,6 +281,8 @@
   "figures/pcu.png" 1776164840 1032666 87ec26285435a9c4cb7cb4ef1d8c7c4e ""
   "figures/progloss.png" 1776164842 1170790 a6db4ea4729f67267920b07a29f69825 ""
   "figures/rsu_esc1.png" 1776164840 2492179 478e93b9c35347dd52f1b18f67ffd53d ""
+  "figures/st_cnn_1.png" 1776671823 35159 d725c874ac837cf500a8c1d39b69b178 ""
+  "figures/st_cnn_2.png" 1776675543 90288 abbf3f69cdd19de861ba2ba3a4b81c33 ""
   "figures/tvap_example.png" 1776164842 196867 c604166bccba9ef56b7bf69000998823 ""
   "figures/uc3mlp_example.png" 1776164842 1610423 f5c1a605d04b9e6a2a03d20b54eb2bc8 ""
   "figures/uc3mvri_example.png" 1776164842 363093 5485de171ec3f0f64e5cddc4cbac7367 ""
@@ -288,10 +291,10 @@
   "figures/yolo8_vdet.png" 1776164840 112590 44d39839171dd184cd4d2df43263e154 ""
   "figures/yolo_stats.png" 1776164842 502685 81988a12c7b480c7f8e0ad865330f9ab ""
   "figures/yolov7_veh.png" 1776164840 84851 e7a145cebdb05ca03d6160d657767863 ""
-  "main.aux" 1776246172 17109 fe336877c7af07965e3e873697b66d0f "pdflatex"
-  "main.bbl" 1776246165 6706 c3ce24b98b111a268ac13e13bf8fbb23 "bibtex main"
-  "main.out" 1776246172 2850 7a8bb17706afd0c32d087f57c11710fc "pdflatex"
-  "main.tex" 1776246135 61041 407bde468fe19b6c2766af12c2c40bab ""
+  "main.aux" 1776676735 18577 251bb1fd4b86ebc2e48f1fe7c0375315 "pdflatex"
+  "main.bbl" 1776676729 7377 b7d70ef32a05c1cbd5e9df90546a7a7e "bibtex main"
+  "main.out" 1776676735 3374 d8c663f7f0f8f5506e91aa207577a6dd "pdflatex"
+  "main.tex" 1776676297 65560 29529c81233bab3e9b3f5c63e8737191 ""
   (generated)
   "main.aux"
   "main.log"

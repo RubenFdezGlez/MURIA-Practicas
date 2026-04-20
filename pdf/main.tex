@@ -13,7 +13,7 @@
 \usepackage{xfrac}
 \usepackage{tikz}
 \usepackage{caption, subcaption}
-\usepackage{lscape}
+% \usepackage{lscape}
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
 \usepackage[export]{adjustbox}
@@ -60,7 +60,7 @@ Esta es una propuesta de investigación sobre el diseño e implementación de un
 % A paragraph summarizing the content of the Research proposal, including (i) the research line selected, (ii) the problem to be solved, (iii) the selected algorithm/method and (iv) the results obtained from that algorithm/method in different datasets from the literature
 
 % END CONTENT ABS------------------------------------------
-\noindent
+
 \textit{\textbf{Keywords: } Detección de vehículos, Identificación, Deep Learning, Cámaras embarcadas} \\ %% <-- Keywords HERE!
 \noindent
 
@@ -83,7 +83,7 @@ Esta es una propuesta de investigación sobre el diseño e implementación de un
 
 La detección e identificación de vehículos en tiempo real es una tarea muy importante actualmente, debido al crecimiento de la industria de coches autónomos (y otros también no autónomos), donde unos sensores se encargan de detectar otros vehículos en las proximidades para poder razonar y actuar gracias a esta información, como pueden ser unos sensores en distintas partes del vehículo para que, al aparcar, puedan detectar y medir distancias a un vehículo próximo. Y no solo es importante para los coches autónomos también lo es para:
 \begin{itemize}
-    \item \textbf{Control del tráfico:} Por ejemplo, se puede implementar un programa para que detecte y cuente la cantidad y tipo de vehículos de una intersección para variar dinámicamente el estado de los semáforos.
+    \item \textbf{Control del tráfico:} Se puede implementar un programa para que detecte y cuente la cantidad y tipo de vehículos de una intersección para variar dinámicamente el estado de los semáforos.
     \item \textbf{Coches robados:} Simplemente se puede hacer una detección de los coches y compararlos uno a uno con una base de datos de coches, o vehículos en general, robados y poder realizar avisos a la policía.
 \end{itemize}
 
@@ -102,6 +102,8 @@ En la sección \ref{sec:literatureReview} o \textbf{Estado del arte}, se nombran
 % --------------------
 % Insert the content of the proposed solutions here. Text from the guide is inserted as a reference for you to be aware of where the text could be inserted in LaTeX.
 \label{sec:literatureReview}
+
+\subsection{Detección de vehículos}
 
 K. Saiveena y P. Praaven \cite{SAIVEENA2026111086} tienen un enfoque de detección y segmentación de vehículos basado en \textit{Edge Intelligence} (EI), una rama de \textit{Deep Learning}. El programa, \textbf{ViT-YOLOv5}, se divide en dos partes fundamentales: la primera es un ViT \textit{(Vision Transformer)}, encargado de \textbf{extraer y procesar las características} de las imágenes sustituyendo la labor del extractor de características del detector \textbf{YOLOv5} \footnote{Accesible a través de GitHub: \url{https://github.com/ultralytics/yolov5}}: \textbf{CSPDarknet}. Esta integración permite capturar de manera más eficiente tanto las características globales como las locales. La segunda parte consta del detector \textbf{YOLOv5}, que se encarga de generar las predicciones de clase, su confianza y las \textit{bounding boxes}. Para medir el rendimiento de este proyecto se obtuvieron 4 datasets de vehículos (dirigidos a detección de objetos principalmente) de la web de Kaggle \footnote{Accesibles a través de: \href{https://www.kaggle.com/datasets/sakshamjn/vehicle-detection-8-classes-object-detection}{Sakshamjn}, \href{https://www.kaggle.com/datasets/saumyapatel/traffic-vehicles-object-detection}{Saumyapatel}, \href{https://www.kaggle.com/datasets/seyeon040768/car-detection-dataset}{Seyeon} y \href{https://www.kaggle.com/datasets/nadinpethiyagoda/vehicle-dataset-for-yolo}{Nadinpethiyagoda}}, alcanzando un \textit{accuracy} de \textbf{97.25\%}, \textbf{94.42\%}, \textbf{94\%} y \textbf{95.7\%} para cada dataset, respectivamente. Un análisis profundo con diferentes configuraciones y modelos se puede observar en la figura \ref{fig:vit-yolo}, con diferencias notables entre el \textbf{YOLOv5} base y el modificado con el transformador, \textbf{ViT-YOLOv5}. Este modelo se ha entrenado en una NVIDIA Tesla V100 GPU de 32GB de RAM.
 
@@ -170,7 +172,9 @@ Otro avance necesario en la gestión del tráfico es el de anomalías, Seyed H.H
 
 
 
-En cámaras de monitorización estáticas, las imágenes son tomadas automáticamente: sin tener la garantía de que los objetos de interés (en este caso los vehículos) se puedan apreciar con claridad, ya sea por clima, la localización de la cámara o que el objeto es parcialmente observable. Para resolver este problema, Sara Beery et Al. \cite{beery2020contextrcnnlongterm} deciden crear una CNN con un módulo de atención de forma que se aprovecha el contexto temporal de los frames no etiquetados para mejorar la precisión, \textbf{Context R-CNN}. En este modelo, donde la base es una \textbf{Faster R-CNN}, las bounding boxes candidatas de la primera parte primero se pasan a través de 2 módulos de atención que indexan en dos depósitos de memoria para \textbf{proveer contexto local y global}. Estos módulos devuelven un vector de características que se pasa a la segunda parte del modelo \textbf{Faster R-CNN} de forma normal. En la figura \ref{fig:context-rcnn} se puede ver el modelo completo. Esta propuesta alcanza un \textbf{42.6\%} de mAP en el dataset CityCam\footnote{El dataset es accesible por \url{https://web.tecnico.ulisboa.pt/~ist12390/public_html/citycam/}}.
+En cámaras de monitorización estáticas, las imágenes son tomadas automáticamente: sin tener la garantía de que los objetos de interés (en este caso los vehículos) se puedan apreciar con claridad, ya sea por clima, la localización de la cámara o que el objeto es parcialmente observable. Para resolver este problema, Sara Beery et Al. \cite{beery2020contextrcnnlongterm} deciden crear una CNN con un módulo de atención de forma que se aprovecha el contexto temporal de los frames no etiquetados para mejorar la precisión, \textbf{Context R-CNN}. En este modelo, donde la base es una \textbf{Faster R-CNN}, las bounding boxes candidatas de la primera parte primero se pasan a través de 2 módulos de atención que indexan en dos depósitos de memoria para \textbf{proveer contexto local y global}. Estos módulos devuelven un vector de características que se pasa a la segunda parte del modelo \textbf{Faster R-CNN} de forma normal. 
+
+En la figura \ref{fig:context-rcnn} se puede ver el modelo completo. Esta propuesta alcanza un \textbf{42.6\%} de mAP en el dataset CityCam\footnote{El dataset es accesible por \url{https://web.tecnico.ulisboa.pt/~ist12390/public_html/citycam/}}.
 
 \begin{figure}[htb]
 \centering
@@ -345,6 +349,192 @@ Este siguiente trabajo de Liang Liang et Al. \cite{s24103088} contribuye con un 
     \footnotesize{Fuente: \textit{https://www.mdpi.com/1424-8220/24/10/3088}}}
     \label{fig:detection-methods}
 \end{figure}
+
+
+
+
+
+\subsection{Detección y lectura de matrículas}
+
+Esta tarea no es un problema que se ha podido resolver recientemente; ya hace 8 años, Hui Li et Al.\cite{LI201814} crean un sistema de detección y reconocimiento de matrículas usando redes neuronales profundas (DNNs). Una red neuronal se entrena con imágenes de texto para poder reconocer las letras y números de la matrícula y se entrena una segunda red neuronal para diferenciar entre la matrícula y otras apariciones de caracteres alfanuméricos. La primera CNN consta de 4 capas con la estructura visible en la figura \ref{fig:st-cnn-1}, para reconocer 26 letras, 10 números y una clase para no-caracteres.
+
+Para detectar las matrículas, se redimensiona la entrada en 12 escalas y se calcula el mapa de caracteres en cada escala evaluando la segunda CNN con un \textbf{método de ventana deslizante} para no perder ningún caracter cerca de los bordes. Las \textit{bounding boxes} candidatas se generan en cada escala usando el algoritmo \textbf{RLSA}\footnote{Método de segmentación de bloques y discriminación de texto: \url{https://github.com/Vasistareddy/pythonRLSA}}, donde píxeles vecinos se conectan si hay cierto espaciado menor que un umbral fijo, y el análisis \textbf{CCA} que produce las \textit{bounding boxes iniciales}. 
+
+Además, las \textit{bounding boxes} producidas se someten a un proceso de refinamiento para \textbf{filtrar las matrículas en términos de limitaciones geométricas} o \textbf{redimensionar en casos donde no se haya reconocido la matrícula completa}. Finalmente, se entrena una tercera CNN de 36 clases, con la estructura de la figura \ref{fig:st-cnn-2}, para extraer las características de la imagen de la matrícula devuelta por la segunda CNN y una red neuronal recurrente bidireccional (BRNN) con LSTM\footnote{Arquitectura que permite que las RNNs puedan aprender dependencias a largo plazo en secuencias de datos.} para reorganizar la secuencia de características. Una CTC recibe la salida de la RNN y devuelve la matrícula en los caracteres alfanuméricos.
+
+\begin{figure}[htb]
+\centering
+    \includegraphics[width=.85\textwidth]{figures/st_cnn_1.png}
+    \caption{Estructura de la primera CNN\\
+    \footnotesize{Fuente: \textit{https://www.sciencedirect.com/science/article/pii/S0262885618300155}}}
+    \label{fig:st-cnn-1}
+\end{figure}
+
+\begin{figure}[htb]
+\centering
+    \includegraphics[width=.85\textwidth]{figures/st_cnn_2.png}
+    \caption{Estructura de la tercera CNN\\
+    \footnotesize{Fuente: \textit{https://www.sciencedirect.com/science/article/pii/S0262885618300155}}}
+    \label{fig:st-cnn-2}
+\end{figure}
+
+Este proceso se ha podido probar usando una NVIDIA Tesla K40c GPU con 6GB de VRAM con un entrenamiento donde la primera CNN se entrena con 138,000 imágenes de caracteres y 900,000 imágenes de no-caracteres, la segunda con recortes de 3,000 imágenes de matrículas y la tercera con las imágenes de no-caracteres. Este proyecto alcanza, en la parte de detección, una precisión del \textbf{97.56\%} y un \textit{recall} del \textbf{95.24\%} en el dataset Caltech\footnote{El dataset es accesible por: \url{https://data.caltech.edu/records/fmbpr-ezq86}}. En la parte de reconocimiento se usa el dataset AOLP\footnote{El dataset es accesible por: \url{https://github.com/AvLab-CV/AOLP}}, en el que se alcanza un \textbf{94.85\%} de precisión.
+
+
+
+Hay una multitud de métodos de Deep Learning que sirven para reconocer matrículas. Laixiang Xu et Al. \cite{XU2026108842} presentan un repaso sobre varias formas de atajar esta tarea. El primer paso es la presentación de varios conjuntos de datos (por resumir, sólo se presentan algunos variados, no los mejores para este trabajo):
+\begin{itemize}
+    \item\textbf{OCR Dataset\footnote{El dataset es accesible por: \url{https://www.kaggle.com/datasets/trainingdatapro/license-plates-1-209-438-ocr-plates}}:} Contiene 3.8M+ de imágenes de matrículas etiquetadas.
+    \item \textbf{License Plate Digits Classification Dataset\footnote{el dataset es accesible por: \url{https://www.kaggle.com/datasets/aladdinss/license-plate-digits-classification-dataset}}:} Está especializado en el reconocimiento de los dígitos de las matrículas.
+    \item \textbf{PKU\footnote{el dataset es accesible por: \url{https://github.com/PKU-IMRE/PKU-Vehicles}}:} 10 millones de imágenes de vehículos con varias localizaciones, iluminación y condiciones atmosféricas.
+    \item \textbf{RodoSol-ALPR\footnote{el dataset es accesible por: \url{https://github.com/raysonlaroca/rodosol-alpr-dataset}}:} 20000 imágenes de 1.280 x 720 píxeles, capturadas de día y noche y en días claros y lluviosos en distintos peajes de Brasil.
+\end{itemize}
+
+Los algoritmos descritos se pueden dividir en los tipos de detectores ya descritos en el último artículo del estado del arte de detección de vehículos:
+\begin{itemize}
+    \item \textbf{Target framework:} Los métodos tradicionales para la detección, como HOG+SVM y Haar Cascade, se dejan atrás para usar algoritmos de Deep Learning como R-CNN o YOLO. Este tipo de detección se pueden dividir en dos tipos:
+    \begin{itemize}
+        \item \textbf{Two-stage:} Primero se genera las regiones propuestas, se clasifican y se aplica regresión a la bounding box. Este es el caso de Faster R-CNN, la cual genera y selecciona las cajas candidatas a través de una red de sugerencias de región (RPN). Segundo, alinea las características y realiza un reconocimiento preciso a través de ROI Pooling. Un ejemplo se puede ver sobre la figura \ref{fig:two-stage}. 
+        \item \textbf{One-stage:} Este método hace las dos cosas conjuntamente: regresión de la probabilidad de clase del objeto y de las coordenadas de la bounding box en cada posición espacial del mapa de características. Algunos ejemplos son la familia YOLO, SSD y sus derivados. Un ejemplo se puede ver sobre la figura \ref{fig:one-stage}. 
+    \end{itemize} 
+    \item \textbf{Anchorless frame:} El ejemplo más claro es con el modelo CenterNet, que se basa en la estimación de los puntos clave. Este hereda la arquitectura de CornetNet, reconstruyendo el objetivo de la detección a partir de los pares de esquina de la bounding box hasta la estimación conjunta de escala central.
+\end{itemize}
+
+\begin{figure}[htb]
+\centering
+    \includegraphics[width=.85\textwidth]{figures/two-stage.jpg}
+    \caption{Flujo de un detector de dos etapas en reconocimiento de matrículas\\
+    \footnotesize{Fuente: \textit{https://www.sciencedirect.com/science/article/pii/S0893608026003047}}}
+    \label{fig:two-stage}
+\end{figure}
+
+\begin{figure}[htb]
+\centering
+    \includegraphics[width=.85\textwidth]{figures/one-stage.jpg}
+    \caption{Flujo de un detector de una etapa en reconocimiento de matrículas\\
+    \footnotesize{Fuente: \textit{https://www.sciencedirect.com/science/article/pii/S0893608026003047}}}
+    \label{fig:one-stage}
+\end{figure}
+
+Se han probado diversos métodos con muy buenos resultados tanto de detección como de rendimiento en cuestión de FPS. Aunque aparecen (y se han probado) muchos más métodos en el trabajo, en la tabla \ref{tab:mat-mult-det}, sólo se dispondrán tres de ellos por cada método de detección (en orden: one-stage, two-stage y anchorless).
+
+\begin{table}[htb]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+         \hline   
+         \textbf{Modelo} & \textbf{Dataset} & \textbf{Nº de imágenes} & \textbf{Accuracy} & \textbf{FPS} & \textbf{Params(M)} & \textbf{FLOPs}\\
+         \hline
+         \textbf{FCOS-SCCA} & CCPD & 265,500 & 95.8\% & 38.6 & 2.5 & 5\\ 
+         \hline
+         \textbf{YOLOv8n} & Mobile phone & 5,546 & 91.4\% & 58 & 2.5 & 11.2\\ 
+         \hline
+         \textbf{MobileNet} & Mobile & 	82,067 & 95.76\% & 60 & 3.4 & 3\\ 
+         \hline
+         \textbf{VGG16} & CCPD & 280,000 & 91.5\% & 32 & 138 & 15.5\\ 
+         \hline
+         \textbf{RNN} & RFID-Station & 1M & 85.19\% & 20 & 2.1 & 4.5\\ 
+         \hline
+         \textbf{Mask-RCNN} & Camera & 7,712 & 97\% & 5 & 40 & 200\\ 
+         \hline
+         \textbf{MobileNetV2} & LFW & 63,236 & 99.46\% & 60 & 3.4 & 3\\ 
+         \hline
+         \textbf{Transformer} & CCPD & 2,600 & 88.64\% & 12 & 10.2 & 18.5\\ 
+         \hline
+         \textbf{DGNet} & ELPR & 9,342 & 94.69\% & 10 & 6.8 & 9.5\\ 
+         \hline
+    \end{tabular}
+    \caption{Resultados de diferentes arquitecturas en la tarea de detección de matrículas de vehículos}
+    \label{tab:mat-mult-det}
+\end{table}
+
+En cuestión de reconocimiento de matrículas, la tecnología ha avanzado mucho, permitiendo capturar, procesar, analizar e interpretar las imágenes de los vehículos para identificar correctamente los caracteres de la matrícula del vehículo, como se puede apreciar en la figura \ref{fig:mat-rec}, con una estructura de un modelo de Deep Learning para esta tarea. Como en el caso anterior, se han probado muchos modelos en el trabajo; en la tabla \ref{tab:mat-mult-rec} se disponen solamente 9 de ellos. 
+
+\begin{figure}[htb]
+\centering
+    \includegraphics[width=.85\textwidth]{figures/mat-rec.jpg}
+    \caption{Estructura de un modelo de Deep Learning para el reconocimiento de matrículas\\
+    \footnotesize{Fuente: \textit{https://www.sciencedirect.com/science/article/pii/S0893608026003047}}}
+    \label{fig:mat-rec}
+\end{figure}
+
+\begin{table}[htb]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+         \hline   
+         \textbf{Modelo} & \textbf{Dataset} & \textbf{Nº de imágenes} & \textbf{Accuracy} & \textbf{FPS} & \textbf{Params(M)} & \textbf{FLOPs}\\
+         \hline
+         \textbf{Hourglass} & UFPR-ALPR & 3.849 & 96.19\% & 110 & 10 & 4\\ 
+         \hline
+         \textbf{YOLOv8} & AOLP & 5,546 & 99.02\% & 101 & 52 & 525\\ 
+         \hline
+         \textbf{DEN-YOLO net} & Tunisia & 265,000 & 98.9\% & 45 & 3.5 & 7.2\\ 
+         \hline
+         \textbf{AENet} & CLPR & 280,000 & 98.4\% & 58 & 2.5 & 11.2\\ 
+         \hline
+         \textbf{CNN RNN} & CBLP & 30,000+ & 98.5\% & 61 & 3.15 & 0.57\\ 
+         \hline
+         \textbf{YOLOv5} & 	UC3M-LP & 4,158 & 98.8\% & 190 & 7.3 & 8.0\\ 
+         \hline
+         \textbf{CenterNet} & OpenALPR & 1,729 & 92.3\% & 74.9 & 3.4 & 2.2\\ 
+         \hline
+         \textbf{LPRNet} & CCPD & 36,715 & 96.00\% & 180 & 4.2 & 1.1\\ 
+         \hline
+         \textbf{YOLOv11} & CSLPD & 3,796 & 93.30\% & 18 & 2.6 & 3.5\\ 
+         \hline
+    \end{tabular}
+    \caption{Resultados de diferentes arquitecturas en la tarea de reconocimiento de matrículas de vehículos}
+    \label{tab:mat-mult-rec}
+\end{table}
+
+
+
+El coste computacional de las CNNs limitan su uso en sistemas de reconocimiento de matrículas. El trabajo presentado por George B. Nardes et Al. \cite{NARDES2026102654}, presenta una CNN de 8 bits cuantificados diseñada para el reconocimiento óptico de caracteres (OCR) de matrículas de Mercosur y Brasil. Los datasets empleados son SATTRA y UFPR-ALPR\footnote{El dataset es accesible por: \url{https://github.com/raysonlaroca/ufpr-alpr-dataset}}, que juntos acaban siendo 82308/3500/13300 imágenes para cada conjunto, respectivamente, y una distribución de clases no balanceada (excepto en el conjunto de validación). 
+
+La arquitectura base seleccionada es LeNet-5, debido a su compactación y bajo número de parámetros, para poder terminar siendo un modelo muy eficiente y portátil cuya arquitectura se puede observar en la figura \ref{fig:lenet}. Las modificaciones aplicadas fueron:
+\begin{itemize}
+    \item La entrada fue modificada para aceptar \textbf{3 canales de 32 x 24 píxeles}.
+    \item Las capas convolucionales se rediseñaron todas para que usen \textbf{kernels de 3 x 3}.
+    \item Las 3 últimas capas totalmente conectadas se convierten en una única, reemplazando las dos primeras por una \textbf{capa convolucional y una capa de agrupación} (pooling). La última parte de la arquitectura termina siendo una cabeza FC de 128 x 35, siendo 35 el número de caracteres del conjunto de entrenamiento.
+\end{itemize}
+
+\begin{figure}[htb]
+\centering
+    \includegraphics[width=.85\textwidth]{figures/lenet.jpg}
+    \caption{Arquitectura de LeNet-5 modificada\\
+    \footnotesize{Fuente: \textit{https://www.sciencedirect.com/science/article/pii/S016792602600009X}}}
+    \label{fig:lenet}
+\end{figure}
+
+Este modelo logra altos resultados de rendimiento en los datasets de UFPR, con una precisión de \textbf{90.22\%} y una matriz de confusión de la figura \ref{fig:lenet-cm}, y sobre todo en el dataset SATTRA, con una precisión de \textbf{97.11\%}. Comparando rendimiento, aunque se comparan varias GPUs, es notable la comparativa entre los \textbf{1.99ms} y \textbf{502 FPS} de la NVIDIA Titan XP con los \textbf{10.20ms} y \textbf{98 FPS} de la Tesla P100.
+
+\begin{figure}[htb]
+\centering
+    \includegraphics[width=.85\textwidth]{figures/lenet_cm.jpg}
+    \caption{Arquitectura de LeNet-5 modificada\\
+    \footnotesize{Fuente: \textit{https://www.sciencedirect.com/science/article/pii/S016792602600009X}}}
+    \label{fig:lenet-cm}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

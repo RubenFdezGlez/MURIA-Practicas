@@ -77,6 +77,11 @@ Liang Liang, Haihua Ma, Le~Zhao, Xiaopeng Xie, Chengxin Hua, Miao Zhang, and Yon
 \newblock Vehicle detection algorithms for autonomous driving: A review.
 \newblock {\em Sensors}, 24(10), 2024.
 
+\bibitem{LI201814}
+Hui Li, Peng Wang, Mingyu You, and Chunhua Shen.
+\newblock Reading car license plates using deep neural networks.
+\newblock {\em Image and Vision Computing}, 72:14--23, 2018.
+
 \bibitem{sapkota2026yolo26keyarchitecturalenhancements}
 Ranjan Sapkota, Rahul~Harsha Cheppally, Ajay Sharda, and Manoj Karkee.
 \newblock Yolo26: Key architectural enhancements and performance benchmarking for real-time object detection, 2026.
@@ -89,6 +94,15 @@ Sudip Chakrabarty.
 {U}{N}{S}{O}: {O}rtogonalizaci\&\#x{F}3;n {U}nificada de {N}ewton {S}chulz --- q2bstudio.com.
 \newblock \url{https://www.q2bstudio.com/nuestro-blog/606893/unificado-de-newton-schulz-metodo-de-ortogonalizacion-aplicado-en-calculos-cientificos}.
 \newblock [Accessed 09-04-2026].
+
+\bibitem{zhang2022dino}
+Hao Zhang, Feng Li, Shilong Liu, Lei Zhang, Hang Su, Jun Zhu, Lionel~M. Ni, and Heung-Yeung Shum.
+\newblock Dino: Detr with improved denoising anchor boxes for end-to-end object detection, 2022.
+
+\bibitem{DBLP:journals/corr/abs-2005-12872}
+Nicolas Carion, Francisco Massa, Gabriel Synnaeve, Nicolas Usunier, Alexander Kirillov, and Sergey Zagoruyko.
+\newblock End-to-end object detection with transformers.
+\newblock {\em CoRR}, abs/2005.12872, 2020.
 
 \bibitem{Sanchez-Iborra2026}
 Ramon Sanchez-Iborra, Vasileios Kouvakis, Stylianos~E. Trevlakis, Gonzalo Alarcon-Hellin, Theodoros Tsiftsis, Luis Bernal-Escobedo, Rodrigo Asensio-Garriga, Alexandros-Apostolos~A. Boulogeorgos, and Antonio Skarmeta.
