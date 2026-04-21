@@ -3,44 +3,47 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: unsrt.bst
 Database file #1: references.bib
-You've used 28 entries,
+Warning--string name "sept" is undefined
+--line 385 of file references.bib
+You've used 31 entries,
             1791 wiz_defined-function locations,
-            606 strings with 10488 characters,
-and the built_in function-call counts, 6841 in all, are:
-= -- 498
-> -- 453
-< -- 7
-+ -- 161
-- -- 133
-* -- 472
-:= -- 1105
-add.period$ -- 78
-call.type$ -- 28
-change.case$ -- 28
+            619 strings with 11075 characters,
+and the built_in function-call counts, 7551 in all, are:
+= -- 557
+> -- 492
+< -- 8
++ -- 175
+- -- 144
+* -- 498
+:= -- 1199
+add.period$ -- 85
+call.type$ -- 31
+change.case$ -- 30
 chr.to.int$ -- 0
-cite$ -- 28
-duplicate$ -- 289
-empty$ -- 643
-format.name$ -- 133
-if$ -- 1532
+cite$ -- 31
+duplicate$ -- 329
+empty$ -- 711
+format.name$ -- 144
+if$ -- 1708
 int.to.chr$ -- 0
-int.to.str$ -- 28
-missing$ -- 21
-newline$ -- 137
-num.names$ -- 27
-pop$ -- 108
+int.to.str$ -- 31
+missing$ -- 23
+newline$ -- 150
+num.names$ -- 30
+pop$ -- 130
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 166
+skip$ -- 204
 stack$ -- 0
-substring$ -- 306
-swap$ -- 84
-text.length$ -- 7
+substring$ -- 324
+swap$ -- 106
+text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 49
-width$ -- 30
-write$ -- 289
+while$ -- 53
+width$ -- 33
+write$ -- 316
+(There was 1 warning)

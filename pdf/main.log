@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.14)  20 APR 2026 19:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.14)  21 APR 2026 14:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -955,112 +955,139 @@ Overfull \hbox (27.09235pt too wide) in paragraph at lines 462--485
  []
 
 [16]
-<figures/lenet.jpg, id=358, 386.78905pt x 113.75298pt>
+<figures/locnet.png, id=358, 286.06876pt x 132.495pt>
+File: figures/locnet.png Graphic file (type png)
+<use figures/locnet.png>
+Package pdftex.def Info: figures/locnet.png  used on input line 501.
+(pdftex.def)             Requested size: 368.57964pt x 170.71303pt.
+<figures/lprnet-backbone.png, id=359, 271.76532pt x 213.04594pt>
+File: figures/lprnet-backbone.png Graphic file (type png)
+<use figures/lprnet-backbone.png>
+Package pdftex.def Info: figures/lprnet-backbone.png  used on input line 509.
+(pdftex.def)             Requested size: 368.57964pt x 288.95518pt.
+<figures/lprnet-basicblock.png, id=360, 263.48438pt x 116.68594pt>
+File: figures/lprnet-basicblock.png Graphic file (type png)
+<use figures/lprnet-basicblock.png>
+Package pdftex.def Info: figures/lprnet-basicblock.png  used on input line 517.
+(pdftex.def)             Requested size: 368.57964pt x 163.23633pt.
+ [17]
+<figures/ocr-arc.png, id=371, 708.39656pt x 221.32687pt>
+File: figures/ocr-arc.png Graphic file (type png)
+<use figures/ocr-arc.png>
+Package pdftex.def Info: figures/ocr-arc.png  used on input line 537.
+(pdftex.def)             Requested size: 368.57964pt x 115.15816pt.
+ [18]
+<figures/lprmnist.png, id=388, 754.31813pt x 54.2025pt>
+File: figures/lprmnist.png Graphic file (type png)
+<use figures/lprmnist.png>
+Package pdftex.def Info: figures/lprmnist.png  used on input line 555.
+(pdftex.def)             Requested size: 368.57964pt x 26.48419pt.
+<figures/lenet.jpg, id=393, 386.78905pt x 113.75298pt>
 File: figures/lenet.jpg Graphic file (type jpg)
 <use figures/lenet.jpg>
-Package pdftex.def Info: figures/lenet.jpg  used on input line 502.
+Package pdftex.def Info: figures/lenet.jpg  used on input line 574.
 (pdftex.def)             Requested size: 368.57964pt x 108.39795pt.
-<figures/lenet_cm.jpg, id=360, 385.05457pt x 416.2752pt>
+<figures/lenet_cm.jpg, id=395, 385.05457pt x 416.2752pt>
 File: figures/lenet_cm.jpg Graphic file (type jpg)
 <use figures/lenet_cm.jpg>
-Package pdftex.def Info: figures/lenet_cm.jpg  used on input line 512.
+Package pdftex.def Info: figures/lenet_cm.jpg  used on input line 584.
 (pdftex.def)             Requested size: 368.57964pt x 398.48268pt.
-<figures/yolo_stats.png, id=363, 1927.2pt x 842.14626pt>
+<figures/yolo_stats.png, id=398, 1927.2pt x 842.14626pt>
 File: figures/yolo_stats.png Graphic file (type png)
 <use figures/yolo_stats.png>
-Package pdftex.def Info: figures/yolo_stats.png  used on input line 554.
+Package pdftex.def Info: figures/yolo_stats.png  used on input line 626.
 (pdftex.def)             Requested size: 368.57964pt x 161.05031pt.
-<figures/yolo26_arch.png, id=367, 531.48563pt x 487.8225pt>
+<figures/yolo26_arch.png, id=402, 531.48563pt x 487.8225pt>
 File: figures/yolo26_arch.png Graphic file (type png)
 <use figures/yolo26_arch.png>
-Package pdftex.def Info: figures/yolo26_arch.png  used on input line 566.
+Package pdftex.def Info: figures/yolo26_arch.png  used on input line 638.
 (pdftex.def)             Requested size: 368.57964pt x 338.30246pt.
- [17]
-<figures/progloss.png, id=381, 1308.89pt x 668.4975pt>
+ [19]
+<figures/progloss.png, id=416, 1308.89pt x 668.4975pt>
 File: figures/progloss.png Graphic file (type png)
 <use figures/progloss.png>
-Package pdftex.def Info: figures/progloss.png  used on input line 585.
+Package pdftex.def Info: figures/progloss.png  used on input line 657.
 (pdftex.def)             Requested size: 368.57964pt x 188.23886pt.
- [18]
-<figures/musgd.png, id=399, 1063.975pt x 582.175pt>
+ [20]
+<figures/musgd.png, id=430, 1063.975pt x 582.175pt>
 File: figures/musgd.png Graphic file (type png)
 <use figures/musgd.png>
-Package pdftex.def Info: figures/musgd.png  used on input line 616.
+Package pdftex.def Info: figures/musgd.png  used on input line 688.
 (pdftex.def)             Requested size: 368.57964pt x 201.66785pt.
 
-Overfull \hbox (1.9pt too wide) in paragraph at lines 653--654
-\OT1/ppl/m/n/10.95 basa-dos en el mod-elo DETR [[]24[]] en t[]erminos de rendimiento y efi-cien-cia us-ando un m[]etodo
+Overfull \hbox (1.90065pt too wide) in paragraph at lines 725--726
+\OT1/ppl/m/n/10.95 basa-dos en el mod-elo DETR [[]27[]] en t[]erminos de rendimiento y efi-cien-cia us-ando un m[]etodo
  []
 
-[19]
-<figures/rsu_esc1.png, id=416, 1444.64719pt x 668.4975pt>
+[21]
+<figures/rsu_esc1.png, id=448, 1444.64719pt x 668.4975pt>
 File: figures/rsu_esc1.png Graphic file (type png)
 <use figures/rsu_esc1.png>
-Package pdftex.def Info: figures/rsu_esc1.png  used on input line 682.
+Package pdftex.def Info: figures/rsu_esc1.png  used on input line 754.
 (pdftex.def)             Requested size: 368.57964pt x 170.5513pt.
-<figures/bdd100k.png, id=420, 3011.25pt x 903.375pt>
+<figures/bdd100k.png, id=452, 3011.25pt x 903.375pt>
 File: figures/bdd100k.png Graphic file (type png)
 <use figures/bdd100k.png>
-Package pdftex.def Info: figures/bdd100k.png  used on input line 696.
+Package pdftex.def Info: figures/bdd100k.png  used on input line 768.
 (pdftex.def)             Requested size: 368.57964pt x 110.56447pt.
-<figures/bdd_example.png, id=421, 1284.8pt x 722.7pt>
+<figures/bdd_example.png, id=453, 1284.8pt x 722.7pt>
 File: figures/bdd_example.png Graphic file (type png)
 <use figures/bdd_example.png>
-Package pdftex.def Info: figures/bdd_example.png  used on input line 704.
+Package pdftex.def Info: figures/bdd_example.png  used on input line 776.
 (pdftex.def)             Requested size: 368.57964pt x 207.32802pt.
- [20]
-<figures/uc3mlp_example.png, id=435, 2509.375pt x 469.755pt>
+ [22]
+<figures/uc3mlp_example.png, id=465, 2509.375pt x 469.755pt>
 File: figures/uc3mlp_example.png Graphic file (type png)
 <use figures/uc3mlp_example.png>
-Package pdftex.def Info: figures/uc3mlp_example.png  used on input line 718.
+Package pdftex.def Info: figures/uc3mlp_example.png  used on input line 790.
 (pdftex.def)             Requested size: 368.57964pt x 68.99796pt.
-<figures/uc3mvri_example.png, id=439, 674.52pt x 192.72pt>
+<figures/uc3mvri_example.png, id=469, 674.52pt x 192.72pt>
 File: figures/uc3mvri_example.png Graphic file (type png)
 <use figures/uc3mvri_example.png>
-Package pdftex.def Info: figures/uc3mvri_example.png  used on input line 737.
+Package pdftex.def Info: figures/uc3mvri_example.png  used on input line 809.
 (pdftex.def)             Requested size: 368.57964pt x 105.31114pt.
- [21]
-<figures/methodology_dl.jpg, id=446, 193.14922pt x 124.58125pt>
+ [23]
+<figures/methodology_dl.jpg, id=478, 193.14922pt x 124.58125pt>
 File: figures/methodology_dl.jpg Graphic file (type jpg)
 <use figures/methodology_dl.jpg>
-Package pdftex.def Info: figures/methodology_dl.jpg  used on input line 780.
+Package pdftex.def Info: figures/methodology_dl.jpg  used on input line 852.
 (pdftex.def)             Requested size: 368.57964pt x 237.76184pt.
- [22]
-Overfull \hbox (6.69722pt too wide) in paragraph at lines 829--830
+ [24]
+Overfull \hbox (6.69722pt too wide) in paragraph at lines 901--902
 []\OT1/ppl/b/n/10.95 Optimizer\OT1/ppl/m/n/10.95 : Es-coger el op-ti-mizador para el en-tre-namiento en-tre \OT1/ppl/b/n/10.95 SGD\OT1/ppl/m/n/10.95 , \OT1/ppl/b/n/10.95 Adam\OT1/ppl/m/n/10.95 , \OT1/ppl/b/n/10.95 AdamW\OT1/ppl/m/n/10.95 ,
  []
 
-[23] [24]
-Overfull \hbox (8.18459pt too wide) in paragraph at lines 896--907
+[25] [26]
+Overfull \hbox (8.18459pt too wide) in paragraph at lines 968--979
  [][] 
  []
 
-(./main.bbl [25] [26]
-Underfull \hbox (badness 10000) in paragraph at lines 104--107
+[27] (./main.bbl [28] [29]
+Underfull \hbox (badness 10000) in paragraph at lines 117--120
 []\OT1/ppl/m/n/10.95 UNSO: Or-tog-o-nal-izaci&#xF3;n Unifi-cada de New-ton Schulz ---
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--107
+Underfull \hbox (badness 10000) in paragraph at lines 117--120
 \OT1/ppl/m/n/10.95 q2bstudio.com.  []$\OT1/pcr/m/n/10.95 https : / / www . q2bstudio . com / nuestro-[]blog / 606893 /
  []
 
 
-Overfull \hbox (162.8544pt too wide) in paragraph at lines 104--107
+Overfull \hbox (162.8544pt too wide) in paragraph at lines 117--120
 \OT1/pcr/m/n/10.95 unificado-[]de-[]newton-[]schulz-[]metodo-[]de-[]ortogonalizacion-[]aplicado-[]en-[]calculos-[]cientificos$[]\OT1/ppl/m/n/10.95 .
  []
 
-[27]
-Underfull \hbox (badness 5274) in paragraph at lines 118--121
+
+Underfull \hbox (badness 5274) in paragraph at lines 131--134
 []\OT1/ppl/m/n/10.95 Ramon Sanchez-Iborra, Vasileios Kou-vakis, Stylianos E. Trevlakis, Gon-zalo
  []
 
-) [28]
+) [30]
 
 Package caption Warning: Unused \captionsetup[sub] on input line 17.
 See the caption package documentation for explanation.
 
-[29 <./figures/st_cnn_2.png>] [30 <./figures/two-stage.jpg> <./figures/one-stage.jpg>] [31 <./figures/mat-rec.jpg> <./figures/lenet.jpg>] [32 <./figures/lenet_cm.jpg> <./figures/yolo_stats.png (PNG copy)>] [33 <./figures/yolo26_arch.png> <./figures/progloss.png>] [34 <./figures/musgd.png> <./figures/rsu_esc1.png> <./figures/bdd100k.png (PNG copy)>] [35 <./figures/bdd_example.png (PNG copy)> <./figures/uc3mlp_example.png (PNG copy)> <./figures/uc3mvri_example.png>] [36 <./figures/methodology_dl.jpg>] (./main.aux)
+[31 <./figures/st_cnn_2.png>] [32 <./figures/two-stage.jpg> <./figures/one-stage.jpg>] [33 <./figures/mat-rec.jpg> <./figures/locnet.png>] [34 <./figures/lprnet-backbone.png> <./figures/lprnet-basicblock.png> <./figures/ocr-arc.png>] [35 <./figures/lprmnist.png> <./figures/lenet.jpg> <./figures/lenet_cm.jpg>] [36 <./figures/yolo_stats.png (PNG copy)> <./figures/yolo26_arch.png>] [37 <./figures/progloss.png> <./figures/musgd.png> <./figures/rsu_esc1.png>] [38 <./figures/bdd100k.png (PNG copy)> <./figures/bdd_example.png (PNG copy)> <./figures/uc3mlp_example.png (PNG copy)> <./figures/uc3mvri_example.png>] [39 <./figures/methodology_dl.jpg>] (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
@@ -1069,13 +1096,16 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D8C663F7F0F8F5506E91AA207577A6DD;3374.
  ) 
 Here is how much of TeX's memory you used:
- 35984 strings out of 467349
- 817629 string characters out of 5419862
+ 36039 strings out of 467349
+ 819063 string characters out of 5419862
  1371503 words of memory out of 5000000
- 64297 multiletter control sequences out of 15000+600000
+ 64340 multiletter control sequences out of 15000+600000
  655139 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 90i,13n,104p,1994b,621s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,13n,104p,1993b,621s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{Hfootnote.23} has been referenced but does not exist, replaced by a fixed one
+
 
 pdfTeX warning (dest): name{Hfootnote.22} has been referenced but does not exist, replaced by a fixed one
 
@@ -1143,10 +1173,10 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 <c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2026/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb><c:/texlive/2026/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb><c:/texlive/2026/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb><c:/texlive/2026/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (36 pages, 15529997 bytes).
+Output written on main.pdf (39 pages, 15653974 bytes).
 PDF statistics:
- 616 PDF objects out of 1000 (max. 8388607)
- 503 compressed objects within 6 object streams
- 149 named destinations out of 1000 (max. 500000)
- 355 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 662 PDF objects out of 1000 (max. 8388607)
+ 536 compressed objects within 6 object streams
+ 161 named destinations out of 1000 (max. 500000)
+ 380 words of extra memory for PDF output out of 10000 (max. 10000000)
 

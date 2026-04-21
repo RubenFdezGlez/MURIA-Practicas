@@ -1,15 +1,15 @@
 # Fdb version 4
-["bibtex main"] 1776707623.72219 "main.aux" "main.bbl" "main" 1776707633.60064 0
-  "./references.bib" 1776682821 30940 2e5cefa8dbec357234fcc4c40b55eacd ""
+["bibtex main"] 1776773489.94941 "main.aux" "main.bbl" "main" 1776773498.7104 0
+  "./references.bib" 1776770460 32162 6ba2fe4f4bde7ca5b429702ee14454da ""
   "c:/texlive/2026/texmf-dist/bibtex/bst/base/unsrt.bst" 1776152433 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "main.aux" 1776707631 21919 ec3e191cb9a19c5f4f254fd611eb7756 "pdflatex"
+  "main.aux" 1776773497 24154 98924bdeadee11ca46668e0c64b49320 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1776707624.48131 "c:/Users/Usuario/Documents/MURIA - Practicas/MURIA-Practicas/pdf/main.tex" "main.pdf" "main" 1776707633.60158 0
+["pdflatex"] 1776773490.71836 "c:/Users/Usuario/Documents/MURIA - Practicas/MURIA-Practicas/pdf/main.tex" "main.pdf" "main" 1776773498.71123 0
   "FAP_style.sty" 1776676557 1272 381e642b51f34f45cb190daf64732531 ""
-  "c:/Users/Usuario/Documents/MURIA - Practicas/MURIA-Practicas/pdf/main.tex" 1776707500 75247 291f09b58f6acad81e8548b2788eddc8 ""
+  "c:/Users/Usuario/Documents/MURIA - Practicas/MURIA-Practicas/pdf/main.tex" 1776773467 84344 20e43a3be9186807e6f97d00f30f2f51 ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/base/8r.enc" 1776153980 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1776154780 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1776153456 960 379cc0019370a9e0208a0a3f949f847a ""
@@ -281,9 +281,14 @@
   "figures/intersec.png" 1776164840 188955 716cf00496769571ada799b5d5958b0f ""
   "figures/lenet.jpg" 1776681145 274782 86131d65dfa4309bec804cae42ef3413 ""
   "figures/lenet_cm.jpg" 1776681673 657518 d0866272530eeb523b07b7636a19215f ""
+  "figures/locnet.png" 1776769554 31750 d8fc0113b66a71c301866f2e75f34f00 ""
+  "figures/lprmnist.png" 1776772993 27072 6e15d4e3addd864642f29b281fc312cc ""
+  "figures/lprnet-backbone.png" 1776765514 46761 211c478a684b98ed726dcd127a821c0d ""
+  "figures/lprnet-basicblock.png" 1776765348 30138 040608fbc593e30d4743599f98a81e66 ""
   "figures/mat-rec.jpg" 1776707232 974499 dbe9f72dc568c57db6f07d4fb57352c8 ""
   "figures/methodology_dl.jpg" 1776164842 133703 0599690e68ae1c2576095f4958042403 ""
   "figures/musgd.png" 1776164842 880856 0a7ac562cc3ed7c0106a162a54600465 ""
+  "figures/ocr-arc.png" 1776758355 34644 4fe10ddb691f8e361a8c3737cd5c84cb ""
   "figures/one-stage.jpg" 1776703668 584040 f01215537786cae7c6c56ea2625fd60a ""
   "figures/pcu.png" 1776164840 1032666 87ec26285435a9c4cb7cb4ef1d8c7c4e ""
   "figures/progloss.png" 1776164842 1170790 a6db4ea4729f67267920b07a29f69825 ""
@@ -299,10 +304,10 @@
   "figures/yolo8_vdet.png" 1776164840 112590 44d39839171dd184cd4d2df43263e154 ""
   "figures/yolo_stats.png" 1776164842 502685 81988a12c7b480c7f8e0ad865330f9ab ""
   "figures/yolov7_veh.png" 1776164840 84851 e7a145cebdb05ca03d6160d657767863 ""
-  "main.aux" 1776707631 21919 ec3e191cb9a19c5f4f254fd611eb7756 "pdflatex"
-  "main.bbl" 1776707624 7897 e5b693293a2750d265e1328377f98b66 "bibtex main"
-  "main.out" 1776707631 3374 d8c663f7f0f8f5506e91aa207577a6dd "pdflatex"
-  "main.tex" 1776707500 75247 291f09b58f6acad81e8548b2788eddc8 ""
+  "main.aux" 1776773497 24154 98924bdeadee11ca46668e0c64b49320 "pdflatex"
+  "main.bbl" 1776773490 8528 edac8400aa194aaefda6a1c07f089340 "bibtex main"
+  "main.out" 1776773497 3374 d8c663f7f0f8f5506e91aa207577a6dd "pdflatex"
+  "main.tex" 1776773467 84344 20e43a3be9186807e6f97d00f30f2f51 ""
   (generated)
   "main.aux"
   "main.log"
