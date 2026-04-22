@@ -488,6 +488,142 @@ En cuestión de reconocimiento de matrículas, la tecnología ha avanzado mucho,
 
 
 
+La detección y reconocimiento de matrículas es una tarea muy importante cuando se quiere la automatización de servicios aduaneros como el peso de camiones. Este también es el caso de la India, cuyas matrículas comprenden una gran variedad de tamaños, fuentes o formas, por lo que el desarrollo de un sistema automático de reconocimiento de matrículas junto al despliegue de un conjunto de datos es necesario para carreteras para este país. Sai Sirisha Nadiminti et Al.\cite{nadiminti2022explorationendtoendautomaticnumberplate} lanzan un dataset de 1,500 imágenes, escalable y reproducible hacia otras implementaciones para esta misma tarea. El conjunto de datos se ha generado a partir de imágenes de páginas como OLX y fotografiando vehículos en carreteras, y etiquetadas con la herramienta labelImg seguiendo el formato VOC Pascal. El algoritmo que se crea es RPNet, que está comprendido por dos módulos:
+\begin{itemize}
+    \item \textbf{Módulo de detección wR2:} CNN profunda con 10 capas convolucionales para \textbf{extraer mapas de características a diferentes escalas}.
+    \item \textbf{Módulo de reconocimiento fh02:} Explota capas de agrupación de regiones de interés para \textbf{extraer mapas de características de interés} y varios clasificadores para \textbf{predecir el número de la matrícula} en la imagen introducida. El primer clasificador se encarga de predecir el código de territorio, que son 2 caracteres, y los 8 siguientes son caracteres alfanuméricos.
+\end{itemize}
+
+El rendimiento conseguido se encuentra en un \textbf{99.3\%} de precisión considerando un IoU de 0.7 en las imágenes del subconjunto de \textbf{CCPD}: \textbf{ccpd\_base} y un \textbf{84.1\%} en el subconjunto \textbf{ccpd\_weather}. El reconocimiento se considera válido si el IoU es mayor que 0.6 y todos los caracteres se han reconocido correctamente; se ha conseguido un \textbf{98.5\%} de precisión en las imágenes del subconjunto \textbf{ccpd\_base} y un \textbf{85.1\%} en el subconjunto \textbf{ccpd\_challenge} con una tiempo de inferencia de 61 FPS. El hardware utilizado para el entrenamiento del modelo es un servidor GPU con 8 CPUs Intel Xeon E5-2682 v4 @ 2.50GHz, 60GB RAM y una Nvidia GPU Tesla P100 PCIe 16GB. La realización de las pruebas se realizaron en portátiles con 8 3.40 GHz Intel Core i7-6700 CPU, 24GB RAM y una Quadro M4000 GPU. 
+
+
+
+La expansión incesante de las ciudades se ha visto beneficiada por mejoras en cuestiones como la ciencia y la tecnología, lo que resulta en un crecimiento del número de vehículos en los núcleos de población, incluyendo Corea del Sur. Esto da pie al problema descontrolado del acceso a un aparcamiento, incluyendo espacios para gente con discapacidad (plazas para minusválidos). Para abordar este problema, Dhiraj Neupane et Al.\cite{neupane2023shinedeeplearningbasedaccessible} idean \textit{Shine}: un sistema de detección novedoso del vehículo, la matrícula (incluido el reconocimiento de los caracteres), y las pegatinas o marcas de vehículos para deshabilitados. La metodología completa que se ha llevado a cabo en este trabajo se puede dividir en:
+\begin{itemize}
+    \item \textbf{Recolección de datos:} 30,000 imágenes de vehículos coreanos y de placas de acceso fueron recogidas de plazas de aparcamiento, páginas del gobierno y conjuntos de datos online. Estas marcas se pueden encontrar en cualquier ángulo por lo que se ha aplicado \textit{Data Augmentation} con rotaciones de hasta 60 grados con intervalos de 30. 
+    \item \textbf{Etiquetado:} Unas 29,000 imágenes se anotaron con el formato YOLO y el formato Pascal VOC para detección de objetos con la herramienta \textbf{makesense.ai}. Las imágenes ya anotadas se dividieron en conjuntos de entrenamiento y validación con una proporción de 90/10. El número de clases en el conjunto es de 69 incluyendo el vehículo, el tipo de matrícula (4 tipos), caracteres alfanuméricos y las marcas, como se puede observar en la figura \ref{fig:cl-dist}.
+    \item \textbf{Entrenamiento y pruebas:}  Especificamente se entrenaron los modelos YOLOv4, YOLOv5s, YOLOv7 y Faster R-CNN a través de \textit{Transfer Learning}, permitiendo usar los modelos preentrenados para adaptarse a esta tarea (o a cualquier otra). Los resultados dispuestos en la tabla \ref{tab:res-shame} demuestran la superioridad de YOLOv7 en cuestión de precision de detección frente a modelos más antiguos YOLO y a Faster R-CNN; sin embargo YOLOv5 supera a todos los demás en cuestión de inferencia por imagen. Finalmente, se termina eligiendo el modelo YOLOv7 debido a la prioridad por la precisión y una velocidad de inferencia aceptable para el proyecto. 
+    \item \textbf{Post-procesado:} Después de aplicar la deteción con YOLOv7, el resultado es procesado por medio de matemática simple para sacar la matrícula y los números de las marcas, mostrado en la figura \ref{fig:shine-example}.
+\end{itemize}
+
+La figura \ref{fig:shine} provee toda la información acerca del funcionamiento del sistema Shine, incluyendo los componentes, el trabajo y los algoritmos, donde (a) enseña los contenidos el hardware completo del sistema, (b) la operación a seguir a partir de una imagen y (c) una demostración del post-procesado que se lleva a cabo para verificar los derechos de accesibilidad del vehículo.
+
+\begin{figure}[htb]
+\centering
+    \includegraphics[width=.85\textwidth]{figures/cl-dist.png}
+    \caption{Distribución de clases del conjunto de datos del sistema Shine\\
+    \footnotesize{Fuente: \textit{https://arxiv.org/pdf/2302.00837}}}
+    \label{fig:cl-dist}
+\end{figure}
+
+\begin{table}[htb]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|}
+         \hline   
+         \textbf{Modelo} & \textbf{mAP50} & \textbf{mAP50-95} & \textbf{Precision} & \textbf{Recall} & \textbf{Inference time}\\
+         \hline
+         \textbf{YOLOv7} & 92.16\% & 66.57\% & 94.7\% & 90.84\% & 60ms\\ 
+         \hline
+         \textbf{YOLOv5s} & 87.77\% & 62.13\% & 94.51\% & 83.08\% & 12.63ms\\ 
+         \hline
+         \textbf{YOLOv4} & 83.17\% & \- & 92\% & 87\% & 260.1ms\\ 
+         \hline
+         \textbf{Faster R-CNN} & 70.50\% & \- & 69.94\% & 72.9\% & 292.33ms\\ 
+         \hline
+    \end{tabular}
+    \caption{Resultados de los modelos de detección usados en el sistema Shine}
+    \label{tab:res-shame}
+\end{table}
+
+\begin{figure}[htb]
+\centering
+    \includegraphics[width=.85\textwidth]{figures/shine-example.png}
+    \caption{Post-procesado de (a) Matrícula (b) Marca\\
+    \footnotesize{Fuente: \textit{https://arxiv.org/pdf/2302.00837}}}
+    \label{fig:shine-example}
+\end{figure}
+
+\begin{figure}[htb]
+\centering
+    \includegraphics[width=.85\textwidth]{figures/shine.png}
+    \caption{Componentes del sistema Shine\\
+    \footnotesize{Fuente: \textit{https://arxiv.org/pdf/2302.00837}}}
+    \label{fig:shine}
+\end{figure}
+
+
+
+La identificación automática de matrículas de vehículos se pueden usar para comparar dichas matrículas con bases de datos de vehículos robados, sin seguro, criminales,... La tecnología de OCR \textit{(Optical Character Recognition)} es una de las más explotadas para reconocer matrículas y aunque, es muy eficaz, tiene varias limitaciones como el ruido, las condiciones atmosféricas, la luz o la oclusión ambiental. Para reparar este hueco, Nouar AlDahoul et Al.\cite{aldahoul2024advancingvehicleplaterecognition} proponen el uso de modelos de lenguaje visual (VLMs) como \textit{OpenAI GPT4o}, \textit{Google Gemini 1.5} o \textit{Anthropic Claude 3.5 Sonnet} en un trabajo comparativo junto con un VLM propio: VehiclePaliGemma. Los conjuntos de datos que se van a utilizar son:
+\begin{itemize}
+    \item \textbf{Complex Plate Dateset:} 258 imágenes de matrículas malayas que están borrosas, difíciles de reconocer para los métodos de OCR y que sólo se utilizarán para evaluar el modelo.
+    \item \textbf{Training Plate Dateset:} 600 imágenes sintéticas para hacer fine-tuning al modelo \textit{PaliGemma}, cada una con un tamaño de 120 x 50 píxeles, rotadas en 5 grados, se difuminaron y se sometieron a ruidos Gaussianos y "sal y pimienta".
+    \item \textbf{Diverse Car Dateset:} 140 imágenes extraídas de Internet etiquetadas por mayoría en votación 3 modelos distintos 
+\end{itemize}
+La solución propuesta es una combinación de Inteligencia Artificial de procesado lenguaje y visual de las VLMs para entender los caracteres sin necesidad de preprocesado. El diagrama de la solución se puede observar en la figura \ref{fig:vlms}. Después de incluir en las pruebas de reconocimiento 3 modelos de OCR: EasyOCR, KerasOCR y Tesseract, los resultados observados en la figura \ref{tab:res-vlms} indican que estos modelos OCR que mostraban buenos resultados en este tipo de tareas, fallan al intentar reconocer las imágenes del dataset \textbf{Malaysian license plates}\footnote{Tesseract está basado en redes LSTM, EasyOCR usa el algoritmo \textit{Character-Region Awareness for Text detection (CRAFT)} junto con RCNNs y KerasOCR usa el algoritmo CRAFT usa RCNNs o transformadores.}. De entre los VLMs preentrenados, GPT-4o destaca reconociendo correctamente 222 de las 258 matrículas, seguido de su versión más pequeña, GPT-4o, y superando ambos con una buena diferencia al resto de VLMs, sean pequeñas o grandes. 
+
+Sin embargo, el modelo que destaca es VehiclePaliGemma, identificando 226 matrículas correctamente; una diferencia considerable con su modelo sin hacer \textit{fine-tuning}, que sólo pudo identificar 178. Además el modelo es capaz de predecir la matrícula de un vehículo a una velocidad de 7 FPS en una A100-80GB GPU. Para analizar más en profundidad los resultados es necesario observar la figura \ref{fig:vlms-cm}, donde los modelos fallan más al intentar identificar los caracteres. 
+
+Cuanto más claro sea una celda, menos veces ha conseguido el modelo identificar ese caracter correctamente. De aquí se pueden sacar observaciones como que la "I" tiene muchos problemas para ser identificada por algunos modelos, pero por otros es totalmente lo contrario o, la más evidente, que todos los modelos tienen problemas para identificar el caracter "Q".
+
+\begin{figure}[htb]
+\centering
+    \includegraphics[width=.85\textwidth]{figures/vlms.png}
+    \caption{Diagrama de uso de VLMs para reconocer caracteres en matrículas\\
+    \footnotesize{Fuente: \textit{https://arxiv.org/pdf/2412.14197}}}
+    \label{fig:vlms}
+\end{figure}
+
+\begin{table}[htb]
+    \centering
+    \begin{tabular}{|c|c|c|}
+         \hline   
+         \textbf{Modelo} & \textbf{Matrículas correctamente predichos} & \textbf{Precisión (\%)}\\
+         \hline
+         \textbf{EasyOCR} & 79 & 32.95\%\\ 
+         \hline
+         \textbf{Tesseract} & 97 & 36.74\%\\ 
+         \hline
+         \textbf{KerasOCR} & 107 & 40.53\%\\ 
+         \hline
+         \textbf{moondream2} & 102 & 39.5\%\\ 
+         \hline
+         \textbf{VILA} & 144 & 55.8\%\\ 
+         \hline
+         \textbf{LLaVA-NeXT-7b} & 147 & 57\%\\ 
+         \hline
+         \textbf{Gemini 1.5 flash} & 200 & 77.5\%\\ 
+         \hline
+         \textbf{GPT-4o-mini} & 220 & 85.7\%\\ 
+         \hline
+         \textbf{LLaVA-NeXT-34b} & 152 & 58.9\%\\ 
+         \hline
+         \textbf{Gemini 1.5 Pro} & 185 & 71.7\%\\ 
+         \hline
+         \textbf{GPT-4o} & 222 & 86\%\\ 
+         \hline
+         \textbf{Llama 3.2 Instruct} & 175 & 67.83\%\\ 
+         \hline
+         \textbf{Claude 3.5 Sonnet} & 186 & 72.1\%\\ 
+         \hline
+         \textbf{Pre-trained PaliGemma} & 178 & 69\%\\ 
+         \hline
+         \textbf{VehiclePaliGemma} & 226 & 87.6\%\\ 
+         \hline
+    \end{tabular}
+    \caption{Resultados de diferentes VLMs en reconocimiento de matrículas}
+    \label{tab:res-vlms}
+\end{table}
+
+\begin{figure}[htb]
+\centering
+    \includegraphics[width=.85\textwidth]{figures/vlms-cm.png}
+    \caption{Mapa de calor de la precisión de reconocimiento de caracteres en diferentes VLMs.\\
+    \footnotesize{Fuente: \textit{https://arxiv.org/pdf/2412.14197}}}
+    \label{fig:vlms-cm}
+\end{figure}
+
+
+
 Con la idea de gestionar de manera eficiente el tráfico, la seguridad, el reconocimiento de vehículos y los aparcamientos, Sergey Zherzdev y Alexey Gruzdev\cite{zherzdev2018lprnetlicenseplaterecognition} crean el primer método en tiempo real de reconocimiento de matrículas que no use RNNs, \textbf{LPRNet}. Estudios previos sugerían el uso de los modelos VGG, ResNet o GoogLeNet para esta tarea; en vez de eso, se construye una red neuronal inspirada en los "bloques de fuego" de SqueezeNet y los bloques de Inception. El diseño consta de varias partes:
 \begin{itemize}
     \item Preprocesamiento con una red de ubicación (LocNet), visible en la figura \ref{fig:locnet}, con una \textbf{capa de transformación espacial}  para conseguir mejores características.

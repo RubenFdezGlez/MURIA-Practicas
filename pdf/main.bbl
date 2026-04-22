@@ -87,6 +87,18 @@ Laixiang Xu, Zihan Shang, Xiangjun Chen, Tiwei Zeng, Wenhao Dai, and Junmin Zhao
 \newblock Deep learning algorithms for license plate recognition: A review.
 \newblock {\em Neural Networks}, 200:108842, 2026.
 
+\bibitem{nadiminti2022explorationendtoendautomaticnumberplate}
+Sai~Sirisha Nadiminti, Pranav~Kant Gaur, and Abhilash Bhardwaj.
+\newblock Exploration of an end-to-end automatic number-plate recognition neural network for indian datasets, 2022.
+
+\bibitem{neupane2023shinedeeplearningbasedaccessible}
+Dhiraj Neupane, Aashish Bhattarai, Sunil Aryal, Mohamed~Reda Bouadjenek, Uk-Min Seok, and Jongwon Seok.
+\newblock Shine: Deep learning-based accessible parking management system, 2023.
+
+\bibitem{aldahoul2024advancingvehicleplaterecognition}
+Nouar AlDahoul, Myles Joshua~Toledo Tan, Raghava~Reddy Tera, Hezerul~Abdul Karim, Chee~How Lim, Manish~Kumar Mishra, and Yasir Zaki.
+\newblock Advancing vehicle plate recognition: Multitasking visual language models with vehiclepaligemma, 2024.
+
 \bibitem{zherzdev2018lprnetlicenseplaterecognition}
 Sergey Zherzdev and Alexey Gruzdev.
 \newblock Lprnet: License plate recognition via deep neural networks, 2018.
@@ -98,7 +110,7 @@ Dat Tran-Anh, Khanh~Linh Tran, and Hoai-Nam Vu.
 \bibitem{Meyer_2025}
 Florent Meyer, Laurent Guichard, Denis Coquenet, Guillaume Gravier, Yann Soullard, and Bertrand Coüasnon.
 \newblock {\em Relaxed Syntax Modeling in Transformers for Future-Proof License Plate Recognition}, page 154–171.
-\newblock Springer Nature Switzerland, 2025.
+\newblock Springer Nature Switzerland, sept 2025.
 
 \bibitem{NARDES2026102654}
 George~B. Nardes, Thiago~H. Rausch, Bruna~H. Pereira, Douglas~R. Melo, and Cesar~A. Zeferino.

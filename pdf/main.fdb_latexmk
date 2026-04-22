@@ -1,15 +1,15 @@
 # Fdb version 4
-["bibtex main"] 1776773489.94941 "main.aux" "main.bbl" "main" 1776773498.7104 0
-  "./references.bib" 1776770460 32162 6ba2fe4f4bde7ca5b429702ee14454da ""
+["bibtex main"] 1776881576.62442 "main.aux" "main.bbl" "main" 1776881587.17776 0
+  "./references.bib" 1776856251 33469 db3a74cb687e13b8c47f335ceb4c4ebf ""
   "c:/texlive/2026/texmf-dist/bibtex/bst/base/unsrt.bst" 1776152433 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "main.aux" 1776773497 24154 98924bdeadee11ca46668e0c64b49320 "pdflatex"
+  "main.aux" 1776881585 27264 8ba441018dd1859a1fecf82e2e8fae32 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1776773490.71836 "c:/Users/Usuario/Documents/MURIA - Practicas/MURIA-Practicas/pdf/main.tex" "main.pdf" "main" 1776773498.71123 0
+["pdflatex"] 1776881577.497 "c:/Users/Usuario/Documents/MURIA - Practicas/MURIA-Practicas/pdf/main.tex" "main.pdf" "main" 1776881587.17883 0
   "FAP_style.sty" 1776676557 1272 381e642b51f34f45cb190daf64732531 ""
-  "c:/Users/Usuario/Documents/MURIA - Practicas/MURIA-Practicas/pdf/main.tex" 1776773467 84344 20e43a3be9186807e6f97d00f30f2f51 ""
+  "c:/Users/Usuario/Documents/MURIA - Practicas/MURIA-Practicas/pdf/main.tex" 1776881538 96433 82a26ace20b4b6a7caa9c5040331eb48 ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/base/8r.enc" 1776153980 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1776154780 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/adobe/courier/pcrr7t.tfm" 1776153456 960 379cc0019370a9e0208a0a3f949f847a ""
@@ -274,6 +274,7 @@
   "figures/bdd100k.png" 1776164840 177005 bc21fb847435e95456b4068b27b2ca20 ""
   "figures/bdd_example.png" 1776164840 756690 88bcdbabf5f5b01eb220c58076c90406 ""
   "figures/bifpn.png" 1776164840 109310 e08c6c248de86eab69107780b63f9bbd ""
+  "figures/cl-dist.png" 1776853540 51557 24b88ec5ed5a83e884bceed3cd162741 ""
   "figures/context_rcnn.png" 1776164840 61961 40524dd4945b83871d93f54a37709257 ""
   "figures/detection_methods.png" 1776164840 244398 06507c788cbbdcd7a55a8b4f52715330 ""
   "figures/doble_yolo.png" 1776164842 78221 0ada19a9f2983517c9bc0bc7fd0a6754 ""
@@ -293,6 +294,8 @@
   "figures/pcu.png" 1776164840 1032666 87ec26285435a9c4cb7cb4ef1d8c7c4e ""
   "figures/progloss.png" 1776164842 1170790 a6db4ea4729f67267920b07a29f69825 ""
   "figures/rsu_esc1.png" 1776164840 2492179 478e93b9c35347dd52f1b18f67ffd53d ""
+  "figures/shine-example.png" 1776855233 1266123 d7962a0155574b15e4782e75eeba63fe ""
+  "figures/shine.png" 1776854870 364351 e3071f32b845823c78b437d0d25d28ff ""
   "figures/st_cnn_1.png" 1776671823 35159 d725c874ac837cf500a8c1d39b69b178 ""
   "figures/st_cnn_2.png" 1776675543 90288 abbf3f69cdd19de861ba2ba3a4b81c33 ""
   "figures/tvap_example.png" 1776164842 196867 c604166bccba9ef56b7bf69000998823 ""
@@ -300,14 +303,16 @@
   "figures/uc3mlp_example.png" 1776164842 1610423 f5c1a605d04b9e6a2a03d20b54eb2bc8 ""
   "figures/uc3mvri_example.png" 1776164842 363093 5485de171ec3f0f64e5cddc4cbac7367 ""
   "figures/vit-yolo.png" 1776164840 79120 9a110e028393ec3ae9332c1abf008453 ""
+  "figures/vlms-cm.png" 1776879816 52541 302f6aa490b62ed204633439be7e21e8 ""
+  "figures/vlms.png" 1776874972 79941 7fc1c73ba09cf0abdc65da27ff41ee8d ""
   "figures/yolo26_arch.png" 1776164842 116023 22788bd7dcf04513fb5ca43d141154b2 ""
   "figures/yolo8_vdet.png" 1776164840 112590 44d39839171dd184cd4d2df43263e154 ""
   "figures/yolo_stats.png" 1776164842 502685 81988a12c7b480c7f8e0ad865330f9ab ""
   "figures/yolov7_veh.png" 1776164840 84851 e7a145cebdb05ca03d6160d657767863 ""
-  "main.aux" 1776773497 24154 98924bdeadee11ca46668e0c64b49320 "pdflatex"
-  "main.bbl" 1776773490 8528 edac8400aa194aaefda6a1c07f089340 "bibtex main"
-  "main.out" 1776773497 3374 d8c663f7f0f8f5506e91aa207577a6dd "pdflatex"
-  "main.tex" 1776773467 84344 20e43a3be9186807e6f97d00f30f2f51 ""
+  "main.aux" 1776881585 27264 8ba441018dd1859a1fecf82e2e8fae32 "pdflatex"
+  "main.bbl" 1776881577 9318 d4a71d4f4df3a65047ef3038b382cb45 "bibtex main"
+  "main.out" 1776881585 3374 d8c663f7f0f8f5506e91aa207577a6dd "pdflatex"
+  "main.tex" 1776881538 96433 82a26ace20b4b6a7caa9c5040331eb48 ""
   (generated)
   "main.aux"
   "main.log"
